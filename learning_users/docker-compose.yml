@@ -1,0 +1,26 @@
+version: "3"
+services:
+  db:
+    restart: always
+    image: mysql:5.7
+    expose:
+      - "3306"
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=webdb
+      - MYSQL_ROOT_PASSWORD=root1234  
+  web:
+    restart: always
+    build: .
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    
+# Add volumes definition to create volume mysql-data referenced above
+volumes:
+  db:
