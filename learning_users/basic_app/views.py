@@ -88,7 +88,6 @@ def user_login(request):
 class UserProfileInfoViewSet(viewsets.ModelViewSet):
     queryset = UserProfileInfo.objects.all()
     serializer_class = UserProfileInfoSerializer
-    # permission_classes = (CustomPermission,)
 
     def get_permissions(self):
         """

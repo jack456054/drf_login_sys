@@ -8,7 +8,6 @@ class UserProfileInfo(models.Model):
 
     # addition
     portfolio_site = models.URLField(blank=True)
-
     profile_pic = models.ImageField(upload_to='profile_pics', blank=True)
 
     def __str__(self):
