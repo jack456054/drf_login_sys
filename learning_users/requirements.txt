@@ -3,7 +3,7 @@ bcrypt==3.1.7
 cffi==1.12.3
 Django==2.2.5
 django-filter==2.2.0
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 Faker==2.0.2
 Pillow==6.1.0
 pycparser==2.19
