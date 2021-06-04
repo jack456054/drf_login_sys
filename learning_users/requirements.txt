@@ -1,7 +1,7 @@
 argon2-cffi==19.1.0
 bcrypt==3.1.7
 cffi==1.12.3
-Django==2.2.5
+Django==2.2.21
 django-filter==2.2.0
 djangorestframework==3.10.3
 Faker==2.0.2
